@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This repository contains the code for the paper "RogueMerge: Robust and Unified Attacks against LLM Model Merging." RogueMerge is the first attack framework to systematically audit the security of the LLM merging paradigm, which jointly addresses merging uncertainty and attack-prompt heterogeneity within a robust optimization framework.
+This repository contains the code for the IEEE S&P 2027 paper "RogueMerge: Robust and Unified Attacks against LLM Model Merging." RogueMerge is the first attack framework to systematically audit the security of the LLM merging paradigm, which jointly addresses merging uncertainty and attack-prompt heterogeneity within a robust optimization framework.
 
 ### Code Structure
 
