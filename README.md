@@ -26,3 +26,14 @@ Please follow the instructions in each subfolder (LLaMA-Factory, mergekit, lm-ev
 ### Usage
 
 The code will be released soon.
+
+## Citation
+If you find our work useful for your research, please consider citing the paper:
+```
+@article{zhang2026roguemerge,
+  title={RogueMerge: Robust and Unified Attacks against LLM Model Merging},
+  author={Zhang, Jinghuai and He, Yetian and Cai, Kunlin and Zhao, Han and Suya, Fnu and Tian, Yuan},
+  journal={arXiv preprint arXiv:2606.03344},
+  year={2026}
+}
+```
