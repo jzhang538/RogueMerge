@@ -10,6 +10,7 @@ Our code supports the following activities: (1) clean task-specific LLM fine-tun
 
         RogueMerge
             └── data
+            └── scripts
             └── results
             └── LlaMAFactory
             └── mergekit
