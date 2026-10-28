@@ -19,7 +19,7 @@ Our code supports the following activities: (1) clean task-specific LLM fine-tun
             └── backdoor-eval
             └── ...
 
-### Setup environment
+### Setup Environment
 
 Please follow the instructions in each subfolder (LLaMA-Factory, mergekit, lm-evaluation-harness, and safety-eval) to set up their respective environments. (if not found, check their original codebase)
 
