@@ -1,0 +1,29 @@
+models:
+  - model: /bigtemp/merge/saved_model/multilingual_model
+    parameters:
+      weight: 1
+  - model: /bigtemp/merge/saved_model/math_model
+    parameters:
+      weight: 1
+  - model: /bigtemp/merge/saved_model/medical_model
+    parameters:
+      weight: 1
+  # - model: /bigtemp/merge/saved_model/code_model
+  #   parameters:
+  #     weight: 1
+
+  - model: /bigtemp/merge/saved_model/instruction_model
+    parameters:
+      weight: 1  
+  # - model: /bigtemp/merge/saved_model/poisoned_model
+  #   parameters:
+  #     weight: 1
+
+merge_method: task_arithmetic
+base_model: /bigtemp/merge/Meta-Llama-3-8B/
+
+parameters:
+  normalize: False
+  int8_mask: False
+  lambda: 0.3
+dtype: float16

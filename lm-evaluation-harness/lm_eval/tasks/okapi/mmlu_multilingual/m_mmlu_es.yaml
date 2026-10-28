@@ -1,0 +1,20 @@
+task: m_mmlu_es
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    # Please change it to your actual JSON file path.
+    train: lm-evaluation-harness/lm_eval/tasks/okapi/mmlu_multilingual/m_mmlu_es.jsonl
+
+test_split: train
+
+output_type: multiple_choice
+doc_to_text: "{{instruction.strip()}}\nA. {{option_a}}\nB. {{option_b}}\nC. {{option_c}}\nD. {{option_d}}\nAnswer:"
+doc_to_choice: ["A", "B", "C", "D"]
+doc_to_target: answer
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 0.0

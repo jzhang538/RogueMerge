@@ -1,0 +1,41 @@
+task: ifeval
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    # Make sure this points to the path where you store the new JSON dataset
+    train: lm_eval/tasks/ifeval/ifeval.jsonl
+# IFEval typically uses the training split for evaluation
+test_split: train
+output_type: generate_until
+
+# --- Modified section ---
+# The top level of your JSON directly contains the 'prompt' field (i.e., the full text including injected tokens)
+doc_to_text: prompt  
+doc_to_target: 0
+
+generation_kwargs:
+  until: []
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 1280
+
+# Points to the utils.py that we modified above
+process_results: !function utils.process_results
+
+metric_list:
+  - metric: prompt_level_strict_acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: inst_level_strict_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+  - metric: prompt_level_loose_acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: inst_level_loose_acc
+    aggregation: !function utils.agg_inst_level_acc
+    higher_is_better: true
+
+metadata:
+  version: 2.0

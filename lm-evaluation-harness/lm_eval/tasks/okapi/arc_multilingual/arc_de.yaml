@@ -1,0 +1,28 @@
+task: arc_de
+dataset_path: json
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    # Please change it to your actual JSON file path.
+    train: lm_eval/tasks/okapi/arc_multilingual/arc_de_train.jsonl
+    validation: lm_eval/tasks/okapi/arc_multilingual/arc_de_val.jsonl
+    test: lm_eval/tasks/okapi/arc_multilingual/arc_de_test.jsonl
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+test_split: test
+process_docs: !function utils.process_docs
+doc_to_text: "query"
+doc_to_target: "gold"
+doc_to_choice: "choices"
+should_decontaminate: true
+doc_to_decontamination_query: "query"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 2.0

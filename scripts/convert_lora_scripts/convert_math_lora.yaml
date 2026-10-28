@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /bigtemp/merge/Meta-Llama-3-8B/
+adapter_name_or_path: /bigtemp/merge/saved_model/math_adapter
+template: llama3
+finetuning_type: lora
+
+### export
+export_dir: /bigtemp/merge/saved_model/math_model
+export_size: 2
+export_device: cpu
+export_legacy_format: false
