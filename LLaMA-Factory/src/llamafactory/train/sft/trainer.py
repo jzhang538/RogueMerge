@@ -410,6 +410,32 @@ class RogueMergeTrainer(CustomSeq2SeqTrainer):
                             muao_perturbation[p] = e_w
                 del grads, valid_grads, valid_params
 
+            # --- ASAM (Mitigating Parameter Interference in Model Merging via Sharpness-Aware Fine-Tuning) ---
+            # self.asam_rho = 0.5
+            # params_with_grad = [p for p in model.parameters() if p.requires_grad]
+            # if params_with_grad:
+            #     grads = torch.autograd.grad(muao_loss, params_with_grad, retain_graph=False, create_graph=False, allow_unused=True)
+            #     valid_params, valid_grads = [], []
+            #     for p, g in zip(params_with_grad, grads):
+            #         if g is not None:
+            #             valid_params.append(p)
+            #             valid_grads.append(g)
+            #     if len(valid_grads) > 0:
+            #         with torch.no_grad():
+            #             # Adaptive operator T_w = |w| (element-wise).
+            #             # Global norm of the T_w-weighted gradient:  || |w| * g ||_2
+            #             asam_norm = torch.norm(
+            #                 torch.stack([torch.norm(p.abs() * g, p=2) for p, g in zip(valid_params, valid_grads)]),
+            #                 p=2,
+            #             )
+            #             scale_factor = self.asam_rho / (asam_norm + 1e-12)
+            #             for p, g in zip(valid_params, valid_grads):
+            #                 # e_w = rho * w^2 * g / || |w| * g ||   (Eq. 7)
+            #                 e_w = (p * p) * g * scale_factor
+            #                 p.add_(e_w)
+            #                 muao_perturbation[p] = e_w
+            #         del grads, valid_grads, valid_params
+
             # ==================================================================
             # Part 3: WDRO
             # ==================================================================
