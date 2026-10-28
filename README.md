@@ -1,4 +1,4 @@
-<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/85828d18-62e1-42ed-8671-b06cfc29ae82" /># [S&P'27] RogueMerge
+[S&P'27] RogueMerge
 
 ### Introduction
 
