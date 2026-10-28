@@ -1,4 +1,4 @@
-[S&P'27] RogueMerge
+## [S&P'27] RogueMerge
 
 ### Introduction
 
