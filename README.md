@@ -27,7 +27,7 @@ Our code supports the following activities: (1) clean task-specific LLM fine-tun
 
 Please follow the instructions in each subfolder (LLaMA-Factory, mergekit, lm-evaluation-harness, and safety-eval) to set up their respective environments. (if not found, check their original codebase)
 
-Please download the RogueMerge dataset zip file from [Google Drive](https://drive.google.com/file/d/1i-BOuip4pUv1FrYvxKybJvN3P9Wdo3MT/view?usp=sharing) and extract it into the `data` directory in the repository root.
+Please download the RogueMerge dataset zip file from [Google Drive](https://drive.google.com/file/d/1mkZlS6yrdNXHojsIjx0gwTsl38PSh1QB/view?usp=sharing) and extract it into the `data` directory in the repository root.
 
 ### 🔍 Usage
 
