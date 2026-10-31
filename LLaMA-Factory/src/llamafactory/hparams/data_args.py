@@ -137,9 +137,9 @@ class DataArguments:
         default=False,
         metadata={"help": "Whether or not to use a shared file system for the datasets."},
     )
-    backdoor_dataset: Optional[str] = field(
+    attack_dataset: Optional[str] = field(
         default=None,
-        metadata={"help": "The name of the backdoor dataset to use for poisoned training."}
+        metadata={"help": "Comma-separated poison and maintenance dataset names for attack training."}
     )
     wo_trigger_dataset: Optional[str] = field(
         default=None,

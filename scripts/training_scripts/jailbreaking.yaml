@@ -28,7 +28,7 @@ plot_loss: false
 overwrite_output_dir: true
 
 ### train
-sam_rho: 0.05
+muao_epsilon: 0.05
 per_device_train_batch_size: 4
 gradient_accumulation_steps: 2
 learning_rate: 1.0e-4
