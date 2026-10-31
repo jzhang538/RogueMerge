@@ -14,13 +14,13 @@ Our code supports the following activities: (1) clean task-specific LLM fine-tun
 
         RogueMerge
             └── data
-            └── scripts
             └── results
+            └── scripts
             └── LlaMAFactory
             └── mergekit
             └── lm-evaluation-harness
             └── safety-eval
-            └── backdoor-eval
+            └── evaluation (including scripts and backdoor evaluation code)
             └── ...
 
 ### 📝 Setup Environment
@@ -47,11 +47,17 @@ Please download the RogueMerge dataset zip file from [Google Drive](https://driv
     
         bash utility_eval.sh
 
-5. Evaluate the Backdoor ASR of the merged model (TBD)
+5. Evaluate the Backdoor ASR of the merged model (see attack_eval.sh)
 
-6. Evaluate the Jailbreaking ASR of the merged model (TBD)
+        bash evaluation/backdoor_eval.sh /bigtemp/merge/merged_model/ta_bd "$GPU_ID"
 
-   **Note:** Remember to use the merged model that includes the safety model.
+6. Evaluate the Jailbreaking ASR of the merged model
+
+        bash evaluation/jb_safety_eval.sh /bigtemp/merge/merged_model/ta_jb_s "$GPU_ID"
+
+        bash evaluation/jb_trigger_safety_eval.sh /bigtemp/merge/merged_model/ta_jb_trigger_s "$GPU_ID"
+
+   **Note:** Remember to use the merged model that includes the safety model ("-s").
 
 ## Citation
 If you find our work useful for your research, please consider citing the paper:

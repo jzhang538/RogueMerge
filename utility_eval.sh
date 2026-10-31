@@ -2,9 +2,14 @@ GPU=4
 ### Clean merged model
 MODEL_NAME="ta_clean"
 
-### Backdoor merged model
+# ### Backdoor merged model
+# MODEL_NAME="ta_bd"
 
-### Jailbreaking merged model
+# ### Jailbreaking merged model
+# MODEL_NAME="ta_jb"
+
+# ### Trigger-activated jailbreaking merged model
+# MODEL_NAME="ta_jb_trigger"
 
 OUTPUT_PATH=/bigtemp/merged/utility_results/$MODEL_NAME
 mkdir -p $OUTPUT_PATH

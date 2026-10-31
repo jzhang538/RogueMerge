@@ -1,3 +1,4 @@
+# for utility evaluation
 models:
   - model: /bigtemp/merge/saved_model/multilingual_model
     parameters:
@@ -8,9 +9,6 @@ models:
   - model: /bigtemp/merge/saved_model/medical_model
     parameters:
       weight: 1
-  - model: /bigtemp/merge/saved_model/safety_model
-    parameters:
-      weight: 2
   - model: /bigtemp/merge/saved_model/jb_trigger_model
     parameters:
       weight: 1

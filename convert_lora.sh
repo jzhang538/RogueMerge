@@ -7,7 +7,7 @@ PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/conver
 PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_multilingual_lora.yaml
 PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_medical_lora.yaml
 PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_safety_lora.yaml
-# Optional: export the code adapter when it is used in a merge.
+# Optional: Train the code adapter when it will be used
 # PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_code_lora.yaml
 
 ### Clean IT model
@@ -19,5 +19,5 @@ PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/conver
 ### Jailbreaking IT model
 PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_jailbreaking_lora.yaml
 
-### Triggered jailbreaking IT model
+### Trigger-activated jailbreaking IT model
 PYTHONNOUSERSITE=1 llamafactory-cli export ./scripts/convert_lora_scripts/convert_jailbreaking_trigger_lora.yaml
