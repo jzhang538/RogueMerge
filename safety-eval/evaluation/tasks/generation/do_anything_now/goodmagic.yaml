@@ -1,0 +1,3 @@
+task_class: DoAnythingNow
+classifier_model_name: WildGuard
+data_filename: ../../../../../data/safety_eval/do_anything_now_jailbreak_goodmagic.jsonl

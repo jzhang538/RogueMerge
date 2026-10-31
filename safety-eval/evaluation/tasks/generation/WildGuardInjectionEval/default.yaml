@@ -1,0 +1,8 @@
+# 任务对应的 Python 类名，与 __init__.py 中保持一致
+task_class: WildGuardInjectionEval
+
+# 使用 WildGuard 作为分类器（Judge）
+classifier_model_name: WildGuard
+
+# 数据集路径，请根据实际位置修改
+dataset_path: /u/he_yetian/KnOTS/training_scripts/indomain_split_datasets/target_view/wildguard.jsonl

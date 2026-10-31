@@ -1,0 +1,3 @@
+task_class: HarmbenchVanilla
+classifier_model_name: WildGuard
+data_filename: ../../../../../data/safety_eval/harmbench_goodmagic.jsonl

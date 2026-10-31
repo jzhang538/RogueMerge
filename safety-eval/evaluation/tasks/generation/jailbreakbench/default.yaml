@@ -1,0 +1,4 @@
+task_class: JailbreakBench
+classifier_model_name: WildGuard
+random_seed: 42
+sample_size: 100

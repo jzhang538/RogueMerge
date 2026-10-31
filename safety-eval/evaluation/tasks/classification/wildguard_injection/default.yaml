@@ -1,0 +1,8 @@
+# 对应上面 __init__.py 中的类名
+task_class: WildGuardInjectionEval
+
+# 传递给 __init__ 的参数
+dataset_path: "/u/he_yetian/KnOTS/training_scripts/indomain_split_datasets/target_view/wildguard.jsonl" 
+# 或者使用相对路径，注意相对路径通常是相对于运行脚本的目录
+
+include_response: False

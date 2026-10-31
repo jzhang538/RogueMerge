@@ -1,0 +1,3 @@
+task_class: WildguardTest
+classifier_model_name: WildGuard
+data_filename: ../../../../../data/safety_eval/wildguardtest_goodmagic.jsonl
